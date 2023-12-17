@@ -10,6 +10,7 @@ export type Resolution = {
 };
 
 const Navbar = () => {
+
   const [resolution, setResolution] = useState<Resolution>({
     width: window.screen.width,
     height: window.screen.height,
@@ -41,11 +42,13 @@ const Navbar = () => {
   };
 
   const toggleHamburger = () => {
-    setIsHamburgerOpen(!isHamburgerOpen);
+    setIsHamburgerOpen(!isHamburgerOpen)
   };
 
   return (
-      <div className="flex py-2 gap-2 max-w-md sm:max-w-lg md:max-w-3xl lg:max-w-4xl xl:max-w-7xl bg-secondary w-full mx-auto border-[2px] border-neutral mt-1 rounded-lg">
+      <div className="flex py-2 gap-2 
+      max-w-md sm:max-w-lg md:max-w-3xl lg:max-w-4xl xl:max-w-7xl w-full mx-auto 
+      bg-secondary border-[2px] border-neutral mt-1 rounded-lg">
         <div className="flex justify-start flex-[1] items-center">
           <p className="text-lg font-bold pl-5 cursor-pointer text-white">
             Testlogo
@@ -63,9 +66,9 @@ const Navbar = () => {
           </div>
           {!isMobile ? 
             <div className="flex items-end gap-2 w-full justify-end pr-3">
-              <button className="btn btn-primary"> Sign in </button>
-              <button className="btn btn-primary"> About </button>
-              <button className="btn btn-primary"> Membership </button>
+              <button className="btn btn-primary text-white"> Sign in </button>
+              <button className="btn btn-primary text-white"> About </button>
+              <button className="btn btn-neutral"> Membership </button>
             </div>
            : 
             <div
@@ -80,7 +83,6 @@ const Navbar = () => {
           <motion.div
             initial="closed"
             animate="open"
-            exit="closed"
             transition={{ duration: 0.5 }}
             variants={variants}
             className="absolute bg-neutral top-16 right-4 sm:right-8 md:right-12 h-auto max-w-[10rem] rounded-md w-full p-2 justify-center flex flex-col items-center"

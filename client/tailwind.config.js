@@ -12,9 +12,9 @@ export default {
       {
         lightMod: {
           ...light,
-          'primary': "#667761",
-          'secondary': '#545E56',
-          'neutral': '#B79492'
+          'primary': '#A5CC6B',
+          'secondary': "#92BDA3",
+          'neutral': '#806D40',
         }
       },
     ]
