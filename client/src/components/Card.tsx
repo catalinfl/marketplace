@@ -1,5 +1,3 @@
-import { motion } from "framer-motion"
-import Photo from "../assets/photo.jpg"
 import Photo2 from "../assets/photo2.jpg"
 const Card = () => {
 

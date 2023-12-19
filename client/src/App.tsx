@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import ListComponent from "./components/ListComponent"
 import Navbar from "./components/Navbar"
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Promoted />
       <Recommanded />
+      <Footer />
     </>
   )
 }
