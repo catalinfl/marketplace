@@ -1,12 +1,6 @@
 import svg from "../assets/addcart.svg"
 import { Typewriter } from "react-simple-typewriter"
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 859870e04ff5542b9bbe76cd200107b394a80bfa
 const Hero = () => {
   return (
     <div className="bg-primary flex flex-col p-3 lg:p-0 xl:flex-row
@@ -19,7 +13,7 @@ const Hero = () => {
             <span className="pl-2 text-4xl lg:text-5xl font-bold"> 
             <Typewriter 
                 words={["jacheta", "pantaloni", "tricou", "absolut orice", "la naiba"]}
-                cursorStyle="|"
+                cursorStyle="."
                 cursor
                 loop={true}
             />
