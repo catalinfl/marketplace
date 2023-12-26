@@ -1,4 +1,3 @@
-import React from 'react'
 import { CiFacebook, CiTwitter, CiYoutube } from 'react-icons/ci'
 
 const Footer = () => {

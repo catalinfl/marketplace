@@ -2,6 +2,7 @@ import svg from "../assets/addcart.svg"
 import { Typewriter } from "react-simple-typewriter"
 
 const Hero = () => {
+
   return (
     <div className="bg-primary flex flex-col p-3 lg:p-0 xl:flex-row
     max-w-md sm:max-w-lg md:max-w-3xl lg:max-w-4xl xl:max-w-7xl w-full mx-auto
@@ -9,10 +10,10 @@ const Hero = () => {
         <div className="flex w-full flex-col pt-8 lg:pt-12 items-center gap-2">
             <div className="flex flex-col h-full">
             <p className="font-light text-center text-3xl lg:text-5xl text-white"> Cumpără sau vinde </p>            
-            <p className="text-center text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-lime-700"> 
+            <p className="text-center text-transparent font-bold bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-800"> 
             <span className="pl-2 text-4xl lg:text-5xl font-bold"> 
             <Typewriter 
-                words={["jacheta", "pantaloni", "tricou", "absolut orice", "la naiba"]}
+                words={["cont Fortnite", "iteme", "skin-uri CSGO", "jocuri", "conturi Steam"]}
                 cursorStyle="."
                 cursor
                 loop={true}

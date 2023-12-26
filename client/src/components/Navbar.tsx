@@ -3,6 +3,7 @@ import { getResolution, isMobileHandle } from "../utils/navUtils";
 import { CiSearch } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export type Resolution = {
   width: number;
@@ -12,25 +13,32 @@ export type Resolution = {
 const Navbar = () => {
 
   const [resolution, setResolution] = useState<Resolution>({
-    width: window.screen.width,
-    height: window.screen.height,
+    width: window.innerWidth,
+    height: window.innerHeight,
   });
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
 
+  console.log(resolution)
   useEffect(() => {
-    window.addEventListener("load", () => {
-      const { width, height } = getResolution();
-      setResolution({ width, height });
-    });
 
-    window.addEventListener("resize", () => {
-      const { width, height } = getResolution();
-      setResolution({ width, height });
-    });
+    const handleResize = () => {
+        const { width, height } = getResolution();
+        setResolution({ width, height })
+    }
 
-    return () => window.removeEventListener("resize", () => {});
-  }, []);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
+    window.addEventListener("load", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
+      window.removeEventListener("load", handleResize);
+    }
+
+  }, [])
+
 
   useEffect(() => {
     setIsMobile(isMobileHandle(resolution));
@@ -45,14 +53,20 @@ const Navbar = () => {
     setIsHamburgerOpen(!isHamburgerOpen)
   };
 
+  console.log(resolution)
+
+  
+
   return (
       <div className="flex py-2 gap-2 
       max-w-md sm:max-w-lg md:max-w-3xl lg:max-w-4xl xl:max-w-7xl w-full mx-auto 
       bg-secondary border-[2px] border-neutral mt-1 rounded-lg">
         <div className="flex justify-start flex-[1] items-center">
+          <Link to="/">
           <p className="text-lg font-bold pl-5 cursor-pointer text-white">
             Testlogo
           </p>
+          </Link>
         </div>
         <div className="flex flex-row flex-[3] justify-center items-center gap-2">
           <div className="flex items-center gap-2 p-2 w-full">

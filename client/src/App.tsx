@@ -4,6 +4,8 @@ import ListComponent from "./components/ListComponent"
 import Navbar from "./components/Navbar"
 import Promoted from "./components/Promoted"
 import Recommanded from "./components/Recommanded"
+import './index.css'
+
 function App() {
 
   return (
