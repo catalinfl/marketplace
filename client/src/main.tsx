@@ -10,6 +10,7 @@ import Steam from './pages/Steam.tsx'
 import Alt from './pages/Alt.tsx'
 import PageItem from './pages/PageItem.tsx'
 import RegLog from './pages/RegLog.tsx'
+import Sell from './pages/Sell.tsx'
 
 
 const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/item/:id",
     element: <PageItem />
+  },
+  {
+    path: '/sell',
+    element: <Sell />
   }
 ])
 

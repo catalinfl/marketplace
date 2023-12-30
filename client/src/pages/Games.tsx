@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 
 const Games = () => {
 
+
+
   return (
     <> 
         <Navbar />

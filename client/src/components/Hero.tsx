@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="flex w-full flex-col pt-8 lg:pt-12 items-center gap-2">
             <div className="flex flex-col h-full">
             <p className="font-light text-center text-3xl lg:text-5xl text-white"> Cumpără sau vinde </p>            
-            <p className="text-center text-transparent font-bold bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-800"> 
+            <p className="text-center text-transparent  bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-800"> 
             <span className="pl-2 text-4xl lg:text-5xl font-bold"> 
             <Typewriter 
                 words={["cont Fortnite", "iteme", "skin-uri CSGO", "jocuri", "conturi Steam"]}
