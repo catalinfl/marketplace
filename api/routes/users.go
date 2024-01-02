@@ -10,5 +10,7 @@ func Users(api *fiber.App) {
 	router := api.Group("/api/users")
 
 	router.Get("/", handlers.GetUsers)
+	router.Post("/", handlers.CreateUser)
+	router.Post("/login", handlers.Login)
 
 }
